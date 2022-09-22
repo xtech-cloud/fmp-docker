@@ -1,0 +1,25 @@
+
+version: "3"
+
+services:
+
+  fmp-web:
+    image: nginx:1.22.0
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /fmp/fmp-web/html:/usr/share/nginx/html
+      - /fmp/fmp-web/conf.d:/etc/nginx/conf.d
+    networks:
+      vpc:
+        ipv4_address: 10.1.253.11
+
+networks:
+  vpc:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.1.0.0/16

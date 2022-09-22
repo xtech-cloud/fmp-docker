@@ -1,0 +1,15 @@
+
+version: "3"
+
+services:
+
+  fmp-web:
+    image: nginx:1.22.0
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /fmp/fmp-web/conf.d:/etc/nginx/conf.d
+      - /fmp/fmp-web/www:/www
+      - /fmp/fmp-web/ssl:/ssl

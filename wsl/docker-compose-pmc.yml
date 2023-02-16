@@ -13,11 +13,11 @@ services:
       - /fmp/fmp-web/html:/usr/share/nginx/html
       - /fmp/fmp-web/conf.d:/etc/nginx/conf.d
     networks:
-      vpc:
+      xtc:
         ipv4_address: 10.1.252.11
 
 networks:
-  vpc:
+  xtc:
     driver: bridge
     ipam:
       driver: default

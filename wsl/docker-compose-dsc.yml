@@ -13,7 +13,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "mysql@XTC"
     networks:
-      vpc:
+      xtc:
         ipv4_address: 10.1.2.11
 
   mongo:
@@ -27,7 +27,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: "mongo@XTC"
     networks:
-      vpc:
+      xtc:
         ipv4_address: 10.1.2.21
 
   redis:
@@ -38,7 +38,7 @@ services:
     volumes:
       - /fmp/redis/data:/data
     networks:
-      vpc:
+      xtc:
         ipv4_address: 10.1.2.31
 
   minio:
@@ -54,11 +54,11 @@ services:
       MINIO_ROOT_PASSWORD: "vJalrXUtnFEMI/I5MDENG/bPxRfmCYEXAMPLEHEY"
     command: server /data --console-address ":9001"
     networks:
-      vpc:
+      xtc:
         ipv4_address: 10.1.2.41
 
 networks:
-  vpc:
+  xtc:
     driver: bridge
     ipam:
       driver: default

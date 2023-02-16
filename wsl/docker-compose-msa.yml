@@ -14,11 +14,11 @@ services:
       - /fmp/fmp-daemon/apps:/app/apps
       - /fmp/fmp-daemon/cers:/app/cers
     networks:
-      xtc:
+      vpc:
         ipv4_address: 10.1.50.11
 
 networks:
-  xtc:
+  vpc:
     driver: bridge
     ipam:
       driver: default

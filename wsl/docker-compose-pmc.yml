@@ -3,12 +3,12 @@ version: "3"
 
 services:
 
-  fmp-web:
+  fmp-pmc:
     image: nginx:1.22.0
     restart: always
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:80"
+      - "8443:443"
     volumes:
       - /fmp/fmp-web/html:/usr/share/nginx/html
       - /fmp/fmp-web/conf.d:/etc/nginx/conf.d

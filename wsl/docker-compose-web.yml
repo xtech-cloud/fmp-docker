@@ -10,7 +10,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - /fmp/fmp-web/html:/usr/share/nginx/html
+      - /fmp/fmp-web/www:/www
       - /fmp/fmp-web/conf.d:/etc/nginx/conf.d
     networks:
       vpc:

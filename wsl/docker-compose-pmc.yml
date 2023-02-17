@@ -10,8 +10,8 @@ services:
       - "8080:80"
       - "8443:443"
     volumes:
-      - /fmp/fmp-web/html:/usr/share/nginx/html
-      - /fmp/fmp-web/conf.d:/etc/nginx/conf.d
+      - /fmp/fmp-pmc/www:/www
+      - /fmp/fmp-pmc/conf.d:/etc/nginx/conf.d
     networks:
       vpc:
         ipv4_address: 10.1.252.11

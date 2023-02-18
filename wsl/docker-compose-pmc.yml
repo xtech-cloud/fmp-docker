@@ -11,6 +11,7 @@ services:
       - "8443:443"
     volumes:
       - /fmp/fmp-pmc/www:/www
+      - /fmp/fmp-pmc/cers:/cers
       - /fmp/fmp-pmc/conf.d:/etc/nginx/conf.d
     networks:
       vpc:
